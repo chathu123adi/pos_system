@@ -4,6 +4,8 @@ import 'package:pos_system/utils/constant/image_string.dart';
 import 'package:pos_system/utils/constant/sizes.dart';
 import 'package:pos_system/view/Authentication/login.dart';
 
+import '../../../utils/media.dart';
+
 class SplashScreen extends StatefulWidget{
   const SplashScreen({super.key});
 
@@ -27,8 +29,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
+    height = MediaQuery.of(context).size.height;
 
     return Scaffold(
       // debugShowCheckedModeBanner: false,
@@ -69,22 +71,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
         ],
       )
-
-
-
-
-
-
-
-
-      // Container(
-      //   decoration: BoxDecoration(
-      //     image: DecorationImage(
-      //       image: AssetImage(splash2),
-      //       fit: BoxFit.contain,
-      //     ),
-      //   ),
-      // ),
     );
   }
 

@@ -16,6 +16,11 @@ class AppTextTheme {
       bodyText1: GoogleFonts.montserrat(
           color: Colors.black45,
           fontSize: 28
-      )
+      ),
+
+    button: GoogleFonts.montserrat(
+      color: Colors.white,
+      fontSize: 40
+    )
   );
 }
