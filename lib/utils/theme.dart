@@ -8,7 +8,7 @@ class AppTheme {
 
   static ThemeData lightTheme = ThemeData(
       brightness: Brightness.light,
-      primarySwatch: Colors.deepPurple, //Colors.blue
+      primarySwatch: Colors.blue, //Colors.blue
       textTheme: AppTextTheme.lightTextTheme,
     // elevatedButtonTheme: ElevatedButtonThemeData(style: ElevatedButton.styleFrom())
   );

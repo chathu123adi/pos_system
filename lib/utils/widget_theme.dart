@@ -20,7 +20,7 @@ class AppTextTheme {
 
     button: GoogleFonts.montserrat(
       color: Colors.white,
-      fontSize: 40
+      fontSize: 30,
     )
   );
 }

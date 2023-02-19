@@ -25,36 +25,68 @@ class _Login extends State<Login> {
           Container(
             width: width,
             height: height,
-            color: loginBgColor,
+            color: Theme.of(context).primaryColor,
           ),
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image(image: AssetImage(splash)),
+              SizedBox(height: 10,),
               Center(
                   child: SizedBox(
                     width: 600,
                     child: Card(
                       elevation: 20,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
                       child: Container (
                         padding: EdgeInsets.all(50),
                         child: Column(
                           children: [
 
-                            TextField(),
+                            TextFormField(
+                              decoration: InputDecoration(
+                                prefixIcon: Padding(padding: EdgeInsets.all(20), child: Icon(Icons.person, size: 40,),),
+                                labelText: "Username",
+                                hintText: "Username",
+                                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10))
+                                // prefixIcon: Icon(Icons.account_circle, size: 40, ),
+                              ),
+                            ),
 
-                            TextField(),
+                            SizedBox(height: 40,),
+
+                            TextField(
+                              decoration: InputDecoration(
+                                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
+                                prefixIcon: Padding(padding: EdgeInsets.all(20), child: Icon(Icons.lock, size: 40,),),
+                                labelText: "Password",
+                                hintText: "Password",
+                              ),
+                            ),
+
+                            SizedBox(height: 10,),
+
+                            SizedBox(height: 10,),
 
                             Column(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
-                                TextButton(onPressed: (){}, child: Text("Forgot Password", )),
+                                TextButton(onPressed: (){}, child: Text("Forgot Password", style: TextStyle(fontSize: 30, fontWeight: FontWeight.normal, color: btnColor),)),
+                                SizedBox(height: 10,),
                                 TextButton(
-                                  style: TextButton.styleFrom(backgroundColor: Theme.of(context).primaryColor, foregroundColor: textColor),
+                                  style: TextButton.styleFrom(
+                                      backgroundColor: Theme.of(context).primaryColor, 
+                                      foregroundColor: textColor,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(15)
+                                    ),
+                                    padding: EdgeInsets.only(left: 30, right: 30, top: 10, bottom: 10)
+                                  ),
                                     onPressed: (){},
                                     child: Text("Login")
                                 ),
-                                TextButton(onPressed: (){}, child: Text("SignUp")),
+                                SizedBox(height: 10,),
+                                TextButton(onPressed: (){}, child: Text("SIGNUP", style: TextStyle(color: btnColor),)),
 
                               ],
                             )
