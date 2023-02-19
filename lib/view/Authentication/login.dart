@@ -12,6 +12,7 @@ class Login extends StatefulWidget {
 }
 
 class _Login extends State<Login> {
+  bool isObscureText = true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +45,7 @@ class _Login extends State<Login> {
                           children: [
 
                             TextFormField(
+                              keyboardType: TextInputType.emailAddress,
                               decoration: InputDecoration(
                                 prefixIcon: Padding(padding: EdgeInsets.all(20), child: Icon(Icons.person, size: 40,),),
                                 labelText: "Username",
@@ -56,11 +58,20 @@ class _Login extends State<Login> {
                             SizedBox(height: 40,),
 
                             TextField(
+                              obscureText: isObscureText,
                               decoration: InputDecoration(
                                 border: OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
                                 prefixIcon: Padding(padding: EdgeInsets.all(20), child: Icon(Icons.lock, size: 40,),),
                                 labelText: "Password",
                                 hintText: "Password",
+                                suffixIcon: IconButton (
+                                  icon: isObscureText ? Icon(Icons.visibility, size: 32,) : Icon(Icons.visibility_off, size: 32,),
+                                  onPressed: () {
+                                    setState(() {
+                                      isObscureText = !isObscureText;
+                                    });
+                                  },
+                                )
                               ),
                             ),
 
